@@ -1,0 +1,21 @@
+.top-padding-fab{
+	position: fixed;
+        right: 1.5em;
+        bottom: 1.5em;
+}
+
+.container
+{
+    width:100%;
+}
+
+.full-width {
+    display:block;
+    background-color:rgb(246,139,29);
+    padding-top:10px;
+    padding-bottom:10px;
+     margin-top:10px;
+    margin-bottom:10px;
+
+}
+
