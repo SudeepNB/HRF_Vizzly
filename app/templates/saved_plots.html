@@ -1,23 +1,6 @@
 {% extends 'base.html' %}
 
-{% load manipulators %}
-
 {% block title %}Welcome, {{ username }}{% endblock %}
-
-{% block actions %}
-{% if is_loggedin %}
-<ul class="nav navbar-nav navbar-right">
-    {% if is_admin %}
-    <li><a href="~admin/">Administration</a></li>
-    {% endif %}
-    <li><a href="/logout/">Logout</a></li>
-</ul>
-{% else %}
-<ul class="nav navbar-nav navbar-right">
-    <li><a href="/login/">Login</a></li>
-</ul>
-{% endif %}
-{% endblock %}
 
 {% block content %}
 <div class="dropdown" style="padding-left:15px">

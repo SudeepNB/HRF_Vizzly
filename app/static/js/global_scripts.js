@@ -101,7 +101,7 @@ $('.plot_link').click( function(e) {
     var obj = JSON.parse($(this).attr('mydata'));
     var name=$(this).attr('myname');
     $('#plot_container').empty();
-      $('#plot_container').append('<span class="label label-default full-width">Plot Name:'+name+'</span>')
+      $('#plot_container').append('<span class="label label-default full-width">Canvas Name:'+name+'</span>')
    e.target.parentElement.click();
     for (var i = 0, len = obj.length; i < len; ++i) {
          var filters = obj[i];

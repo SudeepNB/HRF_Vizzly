@@ -39,6 +39,12 @@
 
 
 
+
+
+
+
+
+
     </style>
     <link rel="shortcut icon" href="/static/favicon.ico">
 
@@ -71,12 +77,27 @@
                 {% block actions %}
 
                 {% endblock %}
-
+                <ul class="nav navbar-nav navbar-right" style="margin-left:20px">
+                    {% if is_admin %}
+                    <li><a href="~admin/">Administration</a></li>
+                    {% endif %}
+                    <a href="/logout/" title="Logout">
+                        <span class="glyphicon glyphicon-log-out"
+                              style="margin-top: 16px;color:rgb(246,139,29)"></span>
+                    </a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="/" title="Home">
+                        <span class="glyphicon glyphicon-home"
+                              style="margin-top: 16px;color:rgb(246,139,29)"></span>
+                    </a>
+                </ul>
                 <div class="navbar-header navbar-right">
                     <a class="navbar-brand" href="https://www.continental-corporation.com/en" target="_blank">
                         <img alt="Continental" src="/static/img/Continental-Logo.svg">
                     </a>
                 </div>
+
             </div>
             {% endif %}
         </nav>
