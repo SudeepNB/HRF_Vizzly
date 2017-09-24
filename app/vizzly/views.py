@@ -55,8 +55,9 @@ def index(request):
     is_loggedin = True if request.user.is_authenticated else False
     is_admin = True if request.user.is_superuser else False
     username = request.user.username
-
-    context = {'is_loggedin': is_loggedin, 'is_admin': is_admin, 'username': username}
+    user = request.user
+    plotscount = SavedPlot.objects.filter(user=user).count()
+    context = {'is_loggedin': is_loggedin, 'is_admin': is_admin, 'username': username, 'plotscount': plotscount}
     return render(request, 'index.html', context)
 
 
@@ -202,7 +203,7 @@ def get_iframe(request):
         agg_param = request.POST.get('aggregation_parameter') if 'aggregation_parameter' in request.POST else ''
 
         iframe_html = """
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"
+            <iframe height="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"
             src="/update_plot?compare_parameter={0}&aggregation_method={1}&aggregation_parameter={2}">
             </iframe><hr />
         """.format(compare_param, agg_method, agg_param)

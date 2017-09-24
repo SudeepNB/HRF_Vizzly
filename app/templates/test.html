@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="POST" role="search" id="formEWT">
+
+    <div class="input-group" style="padding-bottom: 10px">
+                                                    <span class="input-group-addon"
+                                                          id="basic-addon1">Plot Type</span>
+        <select class="form-control" name="compare_parameter"
+                id="plotType">
+             <option id="select" value="select" disabled>Select</option>
+            <option id="bar_plot" value="bar_plot">BAR</option>
+            <option id="line_plot" value="line_plot">LINE</option>
+            <option id="pie_plot" value="pie_plot">PIE</option>
+        </select>
+    </div>
+
+     <div class="input-group" style="padding-bottom: 10px" id="primary_param_div">
+                                                    <span class="input-group-addon"
+                                                          id="basic-addon2">Primary Parameter</span>
+        <select class="form-control" name="compare_parameter"
+                id="x_prim_param">
+
+        </select>
+    </div>
+
+    <div class="input-group" style="padding-bottom: 10px">
+                                                    <span class="input-group-addon"
+                                                          id="basic-addon3">Compare Type</span>
+        <select class="form-control" name="compare_parameter"
+                id="compareTypeEWT">
+            <option value="RPR-DLR">RPR-DLR</option>
+            <option value="BDY MDL">BDY-MDL</option>
+            <option value="PART NO">PART</option>
+            <option value="ENG">ENG</option>
+            <option value="TRAN">TRAN</option>
+        </select>
+    </div>
+
+    <div class="input-group" style="padding-bottom: 10px">
+                                                    <span class="input-group-addon"
+                                                          id="basic-addon4">Aggregation Type</span>
+        <select class="form-control" name="aggregation_method"
+                id="aggregationTypeEWT">
+            <option value="COUNT">COUNT</option>
+            <option value="SUM">SUM</option>
+        </select>
+    </div>
+
+    <div class="input-group sumColumnEWTGroup"
+         id="sumColumnEWTGroup"
+         style="padding-bottom: 10px">
+                                                    <span class="input-group-addon"
+                                                          id="basic-addon5">Column</span>
+        <select class="form-control" name="aggregation_parameter"
+                id="sumColumnEWT">
+            <option value="AMOUNT(USD)">AMOUNT(USD)</option>
+
+        </select>
+    </div>
+    <br>
+
+
+    <button type="submit" id="btnSubmitEWT"
+            class="btn btn-raised btn-warning ">Add
+        Plot
+    </button>
+</form>
+</body>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/testscripts.js"></script>
+
+</html>
