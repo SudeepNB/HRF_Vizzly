@@ -37,6 +37,8 @@
     }
 
 
+
+
     </style>
     <link rel="shortcut icon" href="/static/favicon.ico">
 
@@ -51,6 +53,7 @@
                     <img alt="HRForecast" src="/static/img/HRForecast_Logo.svg">
                 </a>
             </div>
+            {% if is_loggedin %}
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
                     <li>
@@ -75,6 +78,7 @@
                     </a>
                 </div>
             </div>
+            {% endif %}
         </nav>
     </nav>
 </div>
@@ -96,8 +100,9 @@
 <script src="/static/js/global_scripts.js"></script>
 <script type="text/javascript" src="/static/js/bokeh-0.12.9.min.js"></script>
 
-{#<link href="/static/css/bokeh-widgets-0.12.9.css" rel="stylesheet">#}
-{#<script src="/static/js/bokeh-widgets-0.12.9.js"></script>#}
+<link href="/static/css/bokeh-widgets-0.12.9.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="/static/js/bokeh-widgets-0.12.9.js"></script>
 
 {% block extras %}
 {% endblock %}
